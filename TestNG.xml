@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite" verbose="1" parallel="classes" >
+    <test name="regression" >
+        <classes>
+            <class name="ChromeStandAloneTest" />
+            <class name="ChromeStandAloneGmailTest" />
+            <class name="ChromeStandAlonFacebookTest" />
+        </classes>
+    </test>
+</suite>

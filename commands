@@ -1,0 +1,7 @@
+docker-compose -f docker-compose.yaml up
+docker pull selenium/hub selenium/node-chrome selenium/node-firefox
+docker run -p 4444:4444 --name selenium-hub selenium/hub
+docker run --link selenium-hub:hub selenium/node-chrome
+docker-compose scale chrome=5
+docker-compose up >> output.txt
+88950eec5d024d36928152c29cbb1dc5

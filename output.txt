@@ -1,0 +1,33 @@
+Attaching to docker_udemy_hub_1, docker_udemy_opera_1, docker_udemy_firefox_1, docker_udemy_chrome_1
+[32mhub_1      |[0m 2020-06-11 19:17:46,627 INFO Included extra file "/etc/supervisor/conf.d/selenium-hub.conf" during parsing
+[32mhub_1      |[0m 2020-06-11 19:17:46,632 INFO supervisord started with pid 7
+[35mopera_1    |[0m 2020-06-11 19:17:46,970 INFO Included extra file "/etc/supervisor/conf.d/selenium.conf" during parsing
+[35mopera_1    |[0m 2020-06-11 19:17:46,979 INFO supervisord started with pid 7
+[33mfirefox_1  |[0m 2020-06-11 19:17:47,079 INFO Included extra file "/etc/supervisor/conf.d/selenium.conf" during parsing
+[33mfirefox_1  |[0m 2020-06-11 19:17:47,082 INFO supervisord started with pid 7
+[36mchrome_1   |[0m 2020-06-11 19:17:47,086 INFO Included extra file "/etc/supervisor/conf.d/selenium.conf" during parsing
+[36mchrome_1   |[0m 2020-06-11 19:17:47,087 INFO supervisord started with pid 7
+[32mhub_1      |[0m 2020-06-11 19:17:47,634 INFO spawned: 'selenium-hub' with pid 10
+[32mhub_1      |[0m Starting Selenium Hub with configuration:
+[32mhub_1      |[0m 2020-06-11 19:17:47,648 INFO success: selenium-hub entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+[32mhub_1      |[0m {
+[32mhub_1      |[0m   "host": "0.0.0.0",
+[32mhub_1      |[0m   "port": 4444,
+[32mhub_1      |[0m   "role": "hub",
+[32mhub_1      |[0m   "maxSession": 5,
+[32mhub_1      |[0m   "newSessionWaitTimeout": -1,
+[32mhub_1      |[0m   "capabilityMatcher": "org.openqa.grid.internal.utils.DefaultCapabilityMatcher",
+[32mhub_1      |[0m   "throwOnCapabilityNotPresent": true,
+[32mhub_1      |[0m   "jettyMaxThreads": -1,
+[32mhub_1      |[0m   "cleanUpCycle": 5000,
+[32mhub_1      |[0m   "browserTimeout": 0,
+[32mhub_1      |[0m   "timeout": 1800,
+[32mhub_1      |[0m   "debug": false
+[32mhub_1      |[0m }
+[35mopera_1    |[0m 2020-06-11 19:17:47,981 INFO spawned: 'xvfb' with pid 10
+[35mopera_1    |[0m 2020-06-11 19:17:47,983 INFO spawned: 'selenium-node' with pid 11
+[33mfirefox_1  |[0m 2020-06-11 19:17:48,084 INFO spawned: 'xvfb' with pid 10
+[33mfirefox_1  |[0m 2020-06-11 19:17:48,086 INFO spawned: 'selenium-node' with pid 11
+[36mchrome_1   |[0m 2020-06-11 19:17:48,089 INFO spawned: 'xvfb' with pid 10
+[36mchrome_1   |[0m 2020-06-11 19:17:48,090 INFO spawned: 'selenium-node' with pid 11
+Gracefully stopping... (press Ctrl+C again to force)

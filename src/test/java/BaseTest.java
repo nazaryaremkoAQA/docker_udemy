@@ -1,7 +1,9 @@
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import sun.awt.windows.ThemeReader;
 
 import java.io.*;
 import java.net.URL;
@@ -37,6 +39,7 @@ public class BaseTest {
         while (System.currentTimeMillis() < stopnow || line != null) {
 
             if (line == null){
+                Thread.sleep(3000);
                 line = bf.readLine();
             }
             if (line.contains(successStart)) {
@@ -57,14 +60,12 @@ public class BaseTest {
                 break;
             }
             line = bf.readLine();
-
-
         }
         bf.close();
 
         URL url = new URL("http://localhost:4444/wd/hub");
-        DesiredCapabilities cab = DesiredCapabilities.chrome();
-        driver = new RemoteWebDriver(url, cab);
+        ChromeOptions chromeOptions = new ChromeOptions();
+        driver = new RemoteWebDriver(url, chromeOptions);
     }
 
     @AfterTest

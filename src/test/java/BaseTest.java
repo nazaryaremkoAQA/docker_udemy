@@ -23,10 +23,8 @@ public class BaseTest {
         String[] start = {"cmd.exe", "/C", "Start", "docker_start.bat"};
         String[] scale = {"cmd.exe", "/C", "Start", "docker_scale_chrome_5.bat"};
         if (file.delete()) {
-            file.delete();
-            System.out.println("File deleted successfully");
-            file.deleteOnExit();
-        }
+             System.out.println("File deleted successfully");
+         }
 
         Runtime.getRuntime().exec(start);
         Thread.sleep(3000);
@@ -45,8 +43,6 @@ public class BaseTest {
                 break;
             }
             line = bf.readLine();
-
-
         }
 
         Runtime.getRuntime().exec(scale);
@@ -57,9 +53,6 @@ public class BaseTest {
 
         while (System.currentTimeMillis() < stopnow || line != null) {
 
-            if (line == null){
-                line = bf.readLine();
-            }
             if (line.contains(successScale)) {
                 break;
             }
@@ -87,15 +80,10 @@ public class BaseTest {
         }
 
         while (line != null) {
-            if (line == null){
-                line = bf.readLine();
-            }
-
             if (line.contains(stopSuccess)) {
                 break;
             }
             line = bf.readLine();
-
         }
 
         if (file.delete()) {
@@ -103,7 +91,7 @@ public class BaseTest {
             file.deleteOnExit();
 
         }
-        file.deleteOnExit();
+        bf.close();
 
     }
 }

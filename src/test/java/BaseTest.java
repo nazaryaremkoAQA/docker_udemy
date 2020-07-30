@@ -1,11 +1,12 @@
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import sun.awt.windows.ThemeReader;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.net.URL;
 import java.util.Calendar;
 
@@ -64,8 +65,7 @@ public class BaseTest {
         bf.close();
 
         URL url = new URL("http://localhost:4444/wd/hub");
-        ChromeOptions chromeOptions = new ChromeOptions();
-        driver = new RemoteWebDriver(url, chromeOptions);
+        driver = new RemoteWebDriver(url, DesiredCapabilities.chrome());
     }
 
     @AfterTest
